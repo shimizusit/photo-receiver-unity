@@ -1,60 +1,84 @@
 {
+    // Unity C# 基本設定
+    "omnisharp.useModernNet": true,
+    "omnisharp.enableRoslynAnalyzers": true,
+    "omnisharp.enableEditorConfigSupport": true,
+    
+    // エディタの基本設定
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [120],
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.bracketPairColorization.enabled": true,
+    
+    // C#固有の設定
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+        "editor.semanticHighlighting.enabled": true
+    },
+    
+    // ファイル除外設定
     "files.exclude": {
-        "**/.DS_Store": true,
         "**/.git": true,
-        "**/.vs": true,
-        "**/.gitmodules": true,
-        "**/.vsconfig": true,
-        "**/*.booproj": true,
+        "**/.DS_Store": true,
+        "**/Library": true,
+        "**/Temp": true,
+        "**/Obj": true,
+        "**/Build": true,
+        "**/Builds": true,
+        "**/Logs": true,
+        "**/*.csproj": true,
+        "**/*.sln": true,
+        "**/*.meta": true,
+        "**/ProjectSettings": true,
+        "**/UserSettings": true,
+        "**/MemoryCaptures": true,
         "**/*.pidb": true,
         "**/*.suo": true,
         "**/*.user": true,
         "**/*.userprefs": true,
         "**/*.unityproj": true,
-        "**/*.dll": true,
-        "**/*.exe": true,
-        "**/*.pdf": true,
-        "**/*.mid": true,
-        "**/*.midi": true,
-        "**/*.wav": true,
-        "**/*.gif": true,
-        "**/*.ico": true,
-        "**/*.jpg": true,
-        "**/*.jpeg": true,
-        "**/*.png": true,
-        "**/*.psd": true,
-        "**/*.tga": true,
-        "**/*.tif": true,
-        "**/*.tiff": true,
-        "**/*.3ds": true,
-        "**/*.3DS": true,
-        "**/*.fbx": true,
-        "**/*.FBX": true,
-        "**/*.lxo": true,
-        "**/*.LXO": true,
-        "**/*.ma": true,
-        "**/*.MA": true,
-        "**/*.obj": true,
-        "**/*.OBJ": true,
-        "**/*.asset": true,
-        "**/*.cubemap": true,
-        "**/*.flare": true,
-        "**/*.mat": true,
-        "**/*.meta": true,
-        "**/*.prefab": true,
-        "**/*.unity": true,
-        "build/": true,
-        "Build/": true,
-        "Library/": true,
-        "library/": true,
-        "obj/": true,
-        "Obj/": true,
-        "Logs/": true,
-        "logs/": true,
-        "ProjectSettings/": true,
-        "UserSettings/": true,
-        "temp/": true,
-        "Temp/": true
+        "**/*.booproj": true,
+        "**/*.svd": true,
+        "**/*.pdb": true,
+        "**/*.mdb": true,
+        "**/*.opendb": true,
+        "**/*.VC.db": true
     },
-    "dotnet.defaultSolution": "photo-receiver-unity.sln"
+    
+    // 検索除外設定
+    "search.exclude": {
+        "**/Library": true,
+        "**/Temp": true,
+        "**/Obj": true,
+        "**/Build": true,
+        "**/Builds": true,
+        "**/Logs": true,
+        "**/ProjectSettings": true,
+        "**/UserSettings": true,
+        "**/MemoryCaptures": true
+    },
+    
+    // Unity Debug設定
+    "debug.allowBreakpointsEverywhere": true,
+    "debug.inlineValues": true,
+    
+    // コード分析設定
+    "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
+    "csharp.referencesCodeLens.enabled": true,
+    "csharp.testsCodeLens.enabled": true,
+    
+    // ドキュメント生成設定
+    "dotnet.defaultSolution": "photo-receiver-unity.sln",
+    "csharp.suppressDotnetRestoreNotification": true,
+    "csharp.suppressProjectJsonNotification": true,
+    
+    // Unity スクリプトテンプレート設定
+    "unity.templateDir": "${workspaceFolder}/Assets/ScriptTemplates"
 }

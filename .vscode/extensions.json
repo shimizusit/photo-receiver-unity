@@ -1,5 +1,29 @@
 {
     "recommendations": [
-      "visualstudiotoolsforunity.vstuc"
+        // Unity開発用
+        "visualstudiotoolsforunity.vstuc",
+        "unity.unity-debug",
+        "kleber-swf.unity-code-snippets",
+        
+        // C#開発用
+        "ms-dotnettools.csharp",
+        "kreativ-software.csharpextensions",
+        "josefpihrt-vscode.roslynator",
+        "formulahendry.dotnet-test-explorer",
+        
+        // デバッグ & 解析
+        "formulahendry.code-runner",
+        "streetsidesoftware.code-spell-checker",
+        
+        // Git関連
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        
+        // その他の便利な拡張機能
+        "shardulm94.trailing-spaces",
+        "aaron-bond.better-comments",
+        "wayou.vscode-todo-highlight",
+        "gruntfuggly.todo-tree",
+        "vscode-icons-team.vscode-icons"
     ]
 }

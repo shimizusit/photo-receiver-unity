@@ -5,6 +5,23 @@
             "name": "Attach to Unity",
             "type": "vstuc",
             "request": "attach"
+        },
+        {
+            "name": "Unity (.NET Core) Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        },
+        {
+            "name": "Unity Playmode (.NET Core) Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}",
+            "presentation": {
+                "hidden": false,
+                "group": "Unity",
+                "order": 1
+            }
         }
      ]
 }

@@ -1,0 +1,75 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Unity Project",
+            "type": "process",
+            "command": "${workspaceFolder}/Build.bat",
+            "windows": {
+                "command": "${workspaceFolder}/Build.bat"
+            },
+            "linux": {
+                "command": "${workspaceFolder}/build.sh"
+            },
+            "osx": {
+                "command": "${workspaceFolder}/build.sh"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Clean Unity Project",
+            "type": "shell",
+            "command": "rm",
+            "args": [
+                "-rf",
+                "${workspaceFolder}/Library",
+                "${workspaceFolder}/Temp",
+                "${workspaceFolder}/Obj",
+                "${workspaceFolder}/Build",
+                "${workspaceFolder}/Builds",
+                "${workspaceFolder}/Logs"
+            ],
+            "windows": {
+                "command": "rd",
+                "args": [
+                    "/s",
+                    "/q",
+                    "${workspaceFolder}\\Library",
+                    "${workspaceFolder}\\Temp",
+                    "${workspaceFolder}\\Obj",
+                    "${workspaceFolder}\\Build",
+                    "${workspaceFolder}\\Builds",
+                    "${workspaceFolder}\\Logs"
+                ]
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Open Unity",
+            "type": "process",
+            "command": "C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Unity.exe",
+            "args": [
+                "-projectPath",
+                "${workspaceFolder}"
+            ],
+            "windows": {
+                "command": "C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Unity.exe"
+            },
+            "linux": {
+                "command": "/opt/unity/Editor/Unity"
+            },
+            "osx": {
+                "command": "/Applications/Unity/Hub/Editor/2022.3.0f1/Unity.app/Contents/MacOS/Unity"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
